@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import { Container, createTheme, CssBaseline, Typography } from "@mui/material";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Catalog from "../../features/catalog/Catalog";
 import Header from "./Header";
 
@@ -26,7 +27,7 @@ function App() {
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
